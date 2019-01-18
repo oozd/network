@@ -1,34 +1,3 @@
-
-Skip to content
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @oozd
-
-The password you provided is weak and can be easily guessed. To increase your security, please change your password as soon as possible.
-
-Read our documentation on safer password practices.
-
-0
-0
-
-    0
-
-oozd/network
-Code
-Issues 0
-Pull requests 0
-Projects 0
-Wiki
-Insights
-Settings
-network/termProjectDescription
-227c16c 9 minutes ago
-@oozd oozd Create termProjectDescription
-229 lines (139 sloc) 22.1 KB
 In this project you are expected to design a network which consists of a source node, a broker (B), routers and a destination node. This project will be divided into two parts. The first part will be a partially "unreliable" network and the second one will be a "reliable and multi-homed" network. Hence, in the first part of this project, assume that we will send some messages (you will create these messages, its up to your design) over an unreliable network, however, in the second part of the project we will send a large file such that we want to transmit intact from source to destination.   
 
 A. Topology 
