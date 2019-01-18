@@ -1,0 +1,153 @@
+Exp 1.1:
+
+broker: sudo tc qdisc add dev eth1 root netem loss 0.5% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+		sudo tc qdisc add dev eth3 root netem loss 0.5% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+r1:		sudo tc qdisc add dev eth1 root netem loss 0.5% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+r2:		sudo tc qdisc add dev eth2 root netem loss 0.5% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+	109.284536839
+	111.939595938
+	109.872423887
+	110.075590849
+	107.676954031
+
+
+Exp 1.2:
+
+broker: sudo tc qdisc change dev eth1 root netem loss 10% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+		sudo tc qdisc change dev eth3 root netem loss 10% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+r1:		sudo tc qdisc change dev eth1 root netem loss 10% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+r2:		sudo tc qdisc change dev eth2 root netem loss 10% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+	192.404990911
+	192.478694916
+	189.988178015
+	189.998873949
+	193.461713076
+
+Exp 1.3:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 20% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+			sudo tc qdisc change dev eth3 root netem loss 20% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 20% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 20% corrupt 0% duplicate 0% delay 3ms reorder 0% 0%
+
+	278.772706985
+	276.541080952
+	277.491351843
+	271.379781008
+	282.514467955
+	282.343742847
+
+
+
+
+////////////////////////////************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Exp 2.1:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0.2% duplicate 0% delay 3ms reorder 0% 0%
+			sudo tc qdisc change dev eth3 root netem loss 0% corrupt 0.2% duplicate 0% delay 3ms reorder 0% 0%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0.2% duplicate 0% delay 3ms reorder 0% 0%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 0% corrupt 0.2% duplicate 0% delay 3ms reorder 0% 0%
+
+	105.783348083
+	106.390497923
+	106.935940981
+	106.200931072
+	106.528808117
+
+
+
+Exp 2.2:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 0% corrupt 10% duplicate 0% delay 3ms reorder 0% 0%
+			sudo tc qdisc change dev eth3 root netem loss 0% corrupt 10% duplicate 0% delay 3ms reorder 0% 0%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 0% corrupt 10% duplicate 0% delay 3ms reorder 0% 0%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 0% corrupt 10% duplicate 0% delay 3ms reorder 0% 0%
+
+	191.674114943
+	191.086416006
+	189.732215881
+	193.815391064
+	189.849771023
+
+
+
+
+Exp 2.3:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 0% corrupt 20% duplicate 0% delay 3ms reorder 0% 0%
+			sudo tc qdisc change dev eth3 root netem loss 0% corrupt 20% duplicate 0% delay 3ms reorder 0% 0%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 0% corrupt 20% duplicate 0% delay 3ms reorder 0% 0%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 0% corrupt 20% duplicate 0% delay 3ms reorder 0% 0%
+
+	272.749353886
+	273.114748955
+	272.665606976
+	282.577625990
+	290.732733011
+
+
+////////////////////////////************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Exp 3.1:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 1% 50%
+			sudo tc qdisc change dev eth3 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 1% 50%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 1% 50%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 1% 50%
+
+	107.513381004
+	105.515772104
+	104.676771879
+	106.295238018
+	104.684491158
+
+
+
+Exp 3.2:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 10% 50%
+			sudo tc qdisc change dev eth3 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 10% 50%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 10% 50%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 10% 50%
+
+	109.318571091
+	102.411001921
+	106.022679090
+	104.860985041
+	109.768076897
+
+
+Exp 3.3:
+
+	broker: sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 35% 50%
+			sudo tc qdisc change dev eth3 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 35% 50%
+
+	r1:		sudo tc qdisc change dev eth1 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 35% 50%
+
+	r2:		sudo tc qdisc change dev eth2 root netem loss 0% corrupt 0% duplicate 0% delay 3ms reorder 35% 50%
+
+
+	108.075634956
+	104.170720816
+	104.535905838
+	104.475496054
+	105.448162794
