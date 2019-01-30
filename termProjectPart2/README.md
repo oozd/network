@@ -1,6 +1,9 @@
 Please check the report.pdf for the explanation of the solution.
 
 
+
+
+Assignment Text:
                                                          
 In this project you are expected to design a network which consists of a source node, a broker (B), routers and a destination node. This project will be divided into two parts. The first part will be a partially "unreliable" network and the second one will be a "reliable and multi-homed" network. Hence, in the first part of this project, assume that we will send some messages (you will create these messages, its up to your design) over an unreliable network, however, in the second part of the project we will send a large file such that we want to transmit intact from source to destination.   
 
